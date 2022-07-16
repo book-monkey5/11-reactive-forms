@@ -1,0 +1,10 @@
+// ...
+@Component({ /* ... */ })
+export class BookEditComponent {
+  // ...
+  /*BS*/update(book: Book) {
+    this.service.update(book).subscribe(updatedBook => {
+      this.router.navigate(['/books', updatedBook.isbn]);
+    });
+  }/*BE*/
+}

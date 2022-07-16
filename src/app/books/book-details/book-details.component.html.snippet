@@ -1,0 +1,11 @@
+<div class="details" *ngIf="book">
+  <!-- ... -->
+  <button class="red" (click)="removeBook()">
+    Remove book
+  </button>
+
+  <!--BS--><a class="button"
+    [routerLink]="['/admin/edit', book.isbn]">
+    Edit book
+  </a><!--BE-->
+</div>

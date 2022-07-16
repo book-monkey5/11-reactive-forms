@@ -1,0 +1,25 @@
+// ...
+@Component({ /* ... */ })
+export class BookFormComponent implements OnChanges {
+  // ...
+  ngOnChanges(): void {
+    if (this.book) {
+      this.setFormValues(this.book);
+      /*BS*/this.setEditMode(true);/*BE*/
+    }/*BS*/ else {
+      this.setEditMode(false);
+    }/*BE*/
+  }
+
+  // ...
+
+  /*BS*/private setEditMode(isEditing: boolean) {
+    const isbnControl = this.form.get('isbn')!;
+
+    if (isEditing) {
+      isbnControl.disable();
+    } else {
+      isbnControl.enable();
+    }
+  }/*BE*/
+}

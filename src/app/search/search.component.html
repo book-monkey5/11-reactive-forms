@@ -1,0 +1,15 @@
+<input type="search"
+  autocomplete="off"
+  aria-label="Search"
+  [class.loading]="isLoading"
+  #searchInput
+  (input)="input$.next(searchInput.value)">
+
+<ul class="search-results" *ngIf="results.length">
+  <li *ngFor="let book of results">
+    <a [routerLink]="['/books', book.isbn]">
+      {{ book.title }}
+      <p>{{ book.subtitle }}</p>
+    </a>
+  </li>
+</ul>

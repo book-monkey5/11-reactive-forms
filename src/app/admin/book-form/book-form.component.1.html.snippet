@@ -1,0 +1,23 @@
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+  <label for="title">Title</label>
+  <input id="title" formControlName="title">
+
+  <label for="subtitle">Subtitle</label>
+  <input id="subtitle" formControlName="subtitle">
+
+  <label for="isbn">ISBN</label>
+  <input id="isbn" formControlName="isbn">
+
+  <label for="description">Description</label>
+  <textarea id="description" formControlName="description"></textarea>
+
+  <label for="published">Published</label>
+  <input type="date" useValueAsLocalIso id="published" formControlName="published">
+
+  <label for="thumbnailUrl">Thumbnail URL</label>
+  <input type="url" id="thumbnailUrl" formControlName="thumbnailUrl">
+
+  <button type="submit" [disabled]="form.invalid">
+    Save
+  </button>
+</form>

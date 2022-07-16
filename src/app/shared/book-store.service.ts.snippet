@@ -1,0 +1,12 @@
+// ...
+@Injectable({/* ... */})
+export class BookStoreService {
+  // ...
+  /*BS*/update(book: Book): Observable<Book> {
+    return this.http.put<Book>(
+      `${this.apiUrl}/books/${book.isbn}`,
+      book,
+    )
+  }/*BE*/
+}
+

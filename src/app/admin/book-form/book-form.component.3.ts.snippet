@@ -1,0 +1,10 @@
+// ...
+@Component({ /* ... */ })
+export class BookFormComponent {
+  // ...
+  /*BS*/addAuthorControl() {
+    this.authors.push(
+      new FormControl('', { nonNullable: true })
+    );
+  }/*BE*/
+}

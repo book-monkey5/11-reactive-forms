@@ -1,0 +1,13 @@
+<nav>
+  <a routerLink="/home" routerLinkActive="active">Home</a>
+  <a routerLink="/books" routerLinkActive="active">Books</a>
+  <a routerLink="/admin" routerLinkActive="active">Administration</a>
+  <button class="green"
+    (click)="auth.login()"
+    *ngIf="!auth.isAuthenticated">Login</button>
+  <button class="red"
+    (click)="auth.logout()"
+    *ngIf="auth.isAuthenticated">Logout</button>
+</nav>
+
+<router-outlet></router-outlet>

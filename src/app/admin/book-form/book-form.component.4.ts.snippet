@@ -1,0 +1,11 @@
+submitForm() {
+  const formValue = this.form.getRawValue();
+  /*BS*/const authors = formValue.authors.filter(author => !!author);/*BE*/
+
+  const newBook: Book = {
+    ...formValue,
+    /*BS*/authors/*BE*/
+  };
+
+  this.submitBook.emit(newBook);
+}

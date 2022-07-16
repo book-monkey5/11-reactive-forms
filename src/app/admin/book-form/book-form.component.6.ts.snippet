@@ -1,0 +1,13 @@
+// ...
+@Component({ /* ... */ })
+export class BookFormComponent implements OnChanges {
+  // ...
+
+  /*BS*/private setFormValues(book: Book) {
+    this.form.patchValue(book);
+    this.form.setControl(
+      'authors',
+      this.buildAuthorsArray(book.authors)
+    );
+  }/*BE*/
+}

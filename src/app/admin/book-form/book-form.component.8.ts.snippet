@@ -1,0 +1,14 @@
+// ...
+@Component({ /* ... */ })
+export class BookFormComponent {
+  form = new FormGroup({
+    // ...
+    /*BS*/authors: this.buildAuthorsArray(['']),/*BE*/
+  });
+
+  /*BS*/private buildAuthorsArray(authors: string[]) {
+    return new FormArray(
+      authors.map(v => new FormControl(v, { nonNullable: true }))
+    );
+  }/*BE*/
+}

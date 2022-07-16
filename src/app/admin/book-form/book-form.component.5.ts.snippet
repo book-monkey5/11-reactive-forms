@@ -1,0 +1,14 @@
+import { /* ... */, /*BS*/OnChanges/*BE*/ } from '@angular/core';
+// ...
+@Component({ /* ... */ })
+export class BookFormComponent/*BS*/ implements OnChanges/*BE*/ {
+  /*BS*/@Input() book?: Book;/*BE*/
+
+  // ...
+
+  /*BS*/ngOnChanges(): void {
+    if (this.book) {
+      this.setFormValues(this.book);
+    }
+  }/*BE*/
+}
