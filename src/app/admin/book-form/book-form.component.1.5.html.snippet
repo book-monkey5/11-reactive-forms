@@ -2,7 +2,8 @@
 <label for="isbn">ISBN</label>
 <input id="isbn" formControlName="isbn">
 
-<!--BS--><fieldset formArrayName="authors">
+<!--BS--><label>Authors</label>
+<fieldset formArrayName="authors">
   <input
     *ngFor="let a of authors.controls; index as i"
     [attr.aria-label]="'Author ' + i"

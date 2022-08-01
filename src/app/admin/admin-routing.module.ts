@@ -6,8 +6,7 @@ import { BookEditComponent } from './book-edit/book-edit.component';
 const routes: Routes = [
   {
     path: 'admin',
-    redirectTo: 'admin/create',
-    pathMatch: 'full'
+    redirectTo: 'admin/create'
   },
   {
     path: 'admin/create',
