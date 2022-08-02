@@ -1,9 +1,0 @@
-submitForm() {
-  /*BS*/const formValue = this.form.getRawValue();
-  const newBook: Book = {
-    ...formValue,
-    authors: [] // TODO: echte Autoren
-  };/*BE*/
-
-  this.submitBook.emit(/*BS*/newBook/*BE*/);
-}
