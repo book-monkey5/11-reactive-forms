@@ -9,11 +9,7 @@ import { Book } from '../../shared/book';
   styleUrls: ['./book-list.component.css']
 })
 export class BookListComponent {
-  books: Book[] = [];
+  books$ = this.service.getAll();
 
-  constructor(private service: BookStoreService) {
-    this.service.getAll().subscribe(books => {
-      this.books = books;
-    });
-  }
+  constructor(private service: BookStoreService) {}
 }
