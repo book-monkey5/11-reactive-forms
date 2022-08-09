@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
 import { BookStoreService } from '../../shared/book-store.service';
-import { Book } from '../../shared/book';
 
 @Component({
   selector: 'bm-book-list',
