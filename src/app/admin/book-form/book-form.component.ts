@@ -33,8 +33,6 @@ export class BookFormComponent implements OnChanges {
     thumbnailUrl: new FormControl('', { nonNullable: true })
   });
 
-  constructor() {}
-
   ngOnChanges(): void {
     if (this.book) {
       this.setFormValues(this.book);
