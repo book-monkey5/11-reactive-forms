@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 import { BookStoreService } from '../../shared/book-store.service';
 import { Book } from '../../shared/book';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'bm-book-details',
