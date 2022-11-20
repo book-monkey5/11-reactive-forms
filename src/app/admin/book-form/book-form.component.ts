@@ -9,7 +9,6 @@ import { Book } from '../../shared/book';
   styleUrls: ['./book-form.component.css']
 })
 export class BookFormComponent implements OnChanges {
-
   @Input() book?: Book;
   @Output() submitBook = new EventEmitter<Book>();
 

@@ -10,7 +10,7 @@ import { BookStoreService } from '../../shared/book-store.service';
   styleUrls: ['./book-list.component.css']
 })
 export class BookListComponent {
-  books$: Observable<Book[]>
+  books$: Observable<Book[]>;
 
   constructor(private service: BookStoreService) {
     this.books$ = this.service.getAll();
